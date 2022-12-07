@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <p>A share of {{ quoteprice.name }} ({{ quoteprice.symbol }}) costs {{ usd(quoteprice.price) }}</p>
+    <p>Exchange: {{ quoteprice.exchange }}</p>
+    <p>52 Week high: {{ quoteprice.high }}</p>
+    <p>52 Week low: {{ quoteprice.low }}</p>
+    <p>Year to Date change: {{ quoteprice.ytd }}</p>
+{% endblock %}
